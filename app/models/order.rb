@@ -6,5 +6,5 @@ class Order < ApplicationRecord
   validates :shipping_name, presence: true
   validates :shipping_address, presence: true
 
-  has_mant :product_lists
+  has_many :product_lists
 end
