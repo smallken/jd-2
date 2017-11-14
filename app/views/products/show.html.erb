@@ -15,10 +15,10 @@
     </div>
     <div> 数量 : <%= @product.quantity %> </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
+    <div id="add-123" class="pull-right">
       <% if @product.quantity > 0 %>
-      <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post,
-      :class => "btn btn-danger btn-lg") %>
+      <%= link_to("加入购物车", add_to_cart_product_path(@product),
+      :remote => true, method: :post, :class =>  "btn btn-danger btn-lg") %>
       <% else %>
         已销售一空， 无法购买
       <% end %>
